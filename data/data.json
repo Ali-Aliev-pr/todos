@@ -1,0 +1,36 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "My plans on Monday",
+      "more": "It' so hard!",
+      "todos": [
+        "Go to gym",
+        "Play baseball",
+        "To play one katka in cs go"
+      ],
+      "author": "Ali"
+    },
+    {
+      "id": 3,
+      "title": "My plans on Wednesday",
+      "more": "It' so hard!",
+      "todos": [
+        "Go ty gym",
+        "Play baseball",
+        "To play one katka in cs go"
+      ],
+      "author": "Simon"
+    },
+    {
+      "title": "Thusday",
+      "more": "I have lots of work on this day",
+      "author": "Zlata",
+      "todos": [
+        "Check Alis work",
+        "Take Ali on work"
+      ],
+      "id": 8
+    }
+  ]
+}
