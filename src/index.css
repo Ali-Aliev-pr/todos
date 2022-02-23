@@ -159,3 +159,18 @@ input {
   display: flex;
   justify-content: center;
 }
+
+.confirmation {
+  width: 300px;
+  border: 1px solid #000;
+  background-color: beige;
+  position: absolute;
+  top: 217px;
+  left: 571px;
+  text-align: center;
+  padding: 0 5px;
+}
+
+.confirmation__none {
+  display: none;
+}

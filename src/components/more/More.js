@@ -1,5 +1,7 @@
 import {Link, useHistory, useParams} from 'react-router-dom';
 import useFetch from "../customHooks/useFetch";
+import { useState } from 'react';
+import Modal from '../modal/Modal';
 
 const More = () => {
     let {id} = useParams()
@@ -9,13 +11,24 @@ const More = () => {
     let {data} = useFetch('http://localhost:3006/todos/'+id)
     // console.log(data)
 
+    let [modal, setModal] = useState(false);
+
+    let [add, setAdd] = useState(false)
+
     const handleDelete = () => {
-        fetch('http://localhost:3006/todos/'+id, {
+
+        setModal(true)
+
+        if (add === true) {
+            fetch('http://localhost:3006/todos/'+id, {
             method: "DELETE"
-        }).then(() => {
-            console.log('Todo Deleted!')
-            history.push('/')
-        })
+            }).then(() => {
+                console.log('Todo Deleted!')
+                history.push('/')
+            })
+        } else {
+            console.log('Подтвеждение')
+        }
     }
 
     return (
@@ -33,8 +46,11 @@ const More = () => {
                     </ul>
                 </article>
             )}
-            <button onClick={handleDelete}>Delete</button>
-            <Link to={`change/${id}`}>Change</Link>
+            <div className='buttons'>
+                <button onClick={handleDelete}>Delete</button>
+                <Link to={`change/${id}`}>Change</Link>
+            </div>
+            <Modal active={modal} setActive={setModal} setAdd={setAdd}/>
         </div>
     )
 }

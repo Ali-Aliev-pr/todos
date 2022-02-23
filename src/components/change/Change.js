@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { useState } from "react";
 import useFetch from "../customHooks/useFetch";
 
@@ -10,6 +10,7 @@ const Change = () => {
 
     let [todos, setTodos] = useState([])
 
+    let history = useHistory()
 
     const btnChange = () => {
 
@@ -19,12 +20,12 @@ const Change = () => {
             setTodos([...todos, todos.push(e.value)])
         })
 
-        console.log(todos)
-
         fetch('http://localhost:3006/todos/'+id, {
-            method: "PATCH",
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify({todos})
+        method: "PATCH",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({todos})
+        }).then(() => {
+            history.push('/')
         })
     }
 

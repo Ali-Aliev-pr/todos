@@ -1,37 +1,26 @@
 {
   "todos": [
     {
-      "id": 7,
-      "title": "My plans on Wednesday",
-      "more": "It' so hard!",
+      "title": "Plans on friday",
+      "more": "We got lots of what to do",
+      "author": "Ali",
       "todos": [
-        "pa",
-        "pb",
-        "pc"
+        "play fifa",
+        "finish programm",
+        "GO TO GYM",
+        "after swimm"
       ],
-      "author": "Simon"
+      "id": 10
     },
     {
-      "id": 8,
-      "title": "My plans on Wednesday",
-      "more": "It' so hard!",
+      "title": "Friday",
+      "more": "Praying day",
+      "author": "Ali",
       "todos": [
-        "Go ty gym",
-        "Play baseball",
-        "To play one katka in cs go"
+        "Pray in Mosque",
+        "Play foortball"
       ],
-      "author": "Simon"
-    },
-    {
-      "id": 9,
-      "title": "My plans on Wednesday",
-      "more": "It' so hard!",
-      "todos": [
-        "Go ty gym",
-        "Play baseball",
-        "To play one katka in cs go"
-      ],
-      "author": "Simon"
+      "id": 11
     }
   ]
 }
