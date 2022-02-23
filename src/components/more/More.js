@@ -7,7 +7,7 @@ const More = () => {
     let history = useHistory()
 
     let {data} = useFetch('http://localhost:3006/todos/'+id)
-    console.log(data)
+    // console.log(data)
 
     const handleDelete = () => {
         fetch('http://localhost:3006/todos/'+id, {
@@ -34,7 +34,7 @@ const More = () => {
                 </article>
             )}
             <button onClick={handleDelete}>Delete</button>
-            <Link to={`todo/change/${id}`}>Change</Link>
+            <Link to={`change/${id}`}>Change</Link>
         </div>
     )
 }
