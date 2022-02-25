@@ -9,11 +9,11 @@ const useFetch = (url) => {
             headers: {'Accept': 'application/json'}
         })
         .then(res => res.json())
-        .then(e => console.log(e))
+        .then(e => setData(e))
       }, [])
 
     return (
-        { url }
+        { data }
     )
 }
 
