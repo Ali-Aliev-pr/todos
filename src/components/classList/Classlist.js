@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom'
 
 function ClassList({todos}) {
 
-    console.log(todos && todos)
+    console.log(todos && todos.todos)
     
     return (
         <div>
