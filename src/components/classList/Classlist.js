@@ -2,12 +2,12 @@ import {Link} from 'react-router-dom'
 
 function ClassList({todos}) {
 
-    console.log(todos && todos.push({id: 234, title: 'dfghjk', more: "We got lots of what to do", author: "Ali", todos: [
-        "play fifa",
-        "finish programm",
-        "GO TO GYM",
-        "after swimm"
-      ]}))
+    // console.log(todos && todos.push({id: 234, title: 'dfghjk', more: "We got lots of what to do", author: "Ali", todos: [
+    //     "play fifa",
+    //     "finish programm",
+    //     "GO TO GYM",
+    //     "after swimm"
+    //   ]}))
     
     return (
         <div>

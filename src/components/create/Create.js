@@ -24,18 +24,17 @@ const Create = () => {
 
         const todo = {title, more, author, todos}
 
-        // fetch('data.json', {
-        //     method: "POST",
-        //     headers: {"Content-Type": "application/json"},
-        //     body: JSON.stringify(todo)
-        // }).then(() => {
-        //     console.log('New todo created!')
-        //     setAuthor('')
-        //     setMore('')
-        //     setTitle('')
-        //     history.push("/")
-        // })
-        console.log(todo)
+        fetch('data.json.todo', {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(todo)
+        }).then(() => {
+            console.log('New todo created!')
+            setAuthor('')
+            setMore('')
+            setTitle('')
+            history.push("/")
+        })
     }
 
 

@@ -4,7 +4,6 @@ import ClassList from "../classList/Classlist";
 
 function Home() {
     let {data} = useFetch('data.json')
-    // console.log(data && typeof(data))
 
     return (
         <div>
