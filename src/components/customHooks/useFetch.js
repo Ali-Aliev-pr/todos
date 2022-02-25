@@ -10,13 +10,13 @@ const useFetch = (url) => {
         })
         .then(res => res.json())
         .then(e => {
-            console.log(e.todos.push({id: 14, title: 'ASDFGHJKL'}))
+            console.log(typeof(e.todos))
             setData(e.todos)
         })
       }, [])
 
     return (
-        { data }
+        {data}
     )
 }
 
