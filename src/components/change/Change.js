@@ -6,7 +6,7 @@ const Change = () => {
 
     let {id} = useParams()
 
-    const {data} = useFetch('data.json/todos/'+id)
+    const {data} = useFetch('data.json.todos/'+id)
 
     let [todos, setTodos] = useState([])
 
