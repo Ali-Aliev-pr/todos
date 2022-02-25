@@ -1,6 +1,9 @@
 import {Link} from 'react-router-dom'
 
 function ClassList({todos}) {
+
+    console.log(todos)
+    
     return (
         <div>
             <h2>Todos</h2>
