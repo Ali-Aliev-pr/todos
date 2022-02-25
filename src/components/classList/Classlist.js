@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom'
 
 function ClassList({todos}) {
 
-    console.log(todos && todos.todos)
+    console.log(todos && todos.push({id: 234, title: 'dfghjk'}))
     
     return (
         <div>
