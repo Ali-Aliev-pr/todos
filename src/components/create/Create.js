@@ -26,7 +26,7 @@ const Create = () => {
 
         fetch('/todos', {
         method: "POST",
-        headers: {"Content-Type": "application/json"},
+        headers: {"Content-Type": "application/json", 'Accept': 'application/json'},
         body: JSON.stringify(todo)
         }).then(() => {
             console.log('New todo created!')

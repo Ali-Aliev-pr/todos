@@ -22,7 +22,7 @@ const Change = () => {
 
         fetch('/todos/'+id, {
         method: "PATCH",
-        headers: {"Content-Type": "application/json"},
+        headers: {"Content-Type": "application/json", 'Accept': 'application/json'},
         body: JSON.stringify({todos})
         }).then(() => {
             history.push('/')
