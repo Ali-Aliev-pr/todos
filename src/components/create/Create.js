@@ -24,7 +24,7 @@ const Create = () => {
 
         const todo = {title, more, author, todos}
 
-        fetch('http://localhost:3006/todos', {
+        fetch('angry-mcnulty-a3d36f.netlify.app/todos', {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify(todo)

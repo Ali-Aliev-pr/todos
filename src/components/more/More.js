@@ -8,7 +8,7 @@ const More = () => {
 
     let history = useHistory()
 
-    let {data} = useFetch('http://localhost:3006/todos/'+id)
+    let {data} = useFetch('angry-mcnulty-a3d36f.netlify.app/todos/'+id)
     // console.log(data)
 
     let [modal, setModal] = useState(false);
@@ -20,7 +20,7 @@ const More = () => {
         setModal(true)
 
         if (add === true) {
-            fetch('http://localhost:3006/todos/'+id, {
+            fetch('angry-mcnulty-a3d36f.netlify.app/todos/'+id, {
             method: "DELETE"
             }).then(() => {
                 console.log('Todo Deleted!')
