@@ -10,8 +10,8 @@ const useFetch = (url) => {
         })
         .then(res => res.json())
         .then(e => {
-            console.log(e)
-            setData(e)
+            console.log(e.todos)
+            setData(e.todos)
         })
       }, [])
 
