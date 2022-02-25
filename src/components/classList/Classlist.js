@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 function ClassList({todos}) {
 
     console.log(todos)
+    console.log([].push(45678))
     
     return (
         <div>
