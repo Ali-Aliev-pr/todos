@@ -3,7 +3,7 @@ import useFetch from "../customHooks/useFetch";
 import ClassList from "../classList/Classlist";
 
 function Home() {
-    let {data} = useFetch('data.json/todos')
+    let {data} = useFetch('data.json')
 
     return (
         <div>
