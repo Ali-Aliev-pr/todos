@@ -2,8 +2,7 @@ import {Link} from 'react-router-dom'
 
 function ClassList({todos}) {
 
-    console.log(todos.push({title: 'fffffgggh'}))
-    console.log([].push(45678))
+    console.log(todos.todos.push({title: 'fffffgggh'}))
     
     return (
         <div>
