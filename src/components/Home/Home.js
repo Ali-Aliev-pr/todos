@@ -3,7 +3,7 @@ import useFetch from "../customHooks/useFetch";
 import ClassList from "../classList/Classlist";
 
 function Home() {
-    let {data} = useFetch('angry-mcnulty-a3d36f.netlify.app/todos')
+    let {data} = useFetch('/todos')
 
     return (
         <div>

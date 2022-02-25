@@ -6,7 +6,7 @@ const Change = () => {
 
     let {id} = useParams()
 
-    const {data} = useFetch('angry-mcnulty-a3d36f.netlify.app/todos/'+id)
+    const {data} = useFetch('/todos/'+id)
 
     let [todos, setTodos] = useState([])
 
@@ -20,7 +20,7 @@ const Change = () => {
             setTodos([...todos, todos.push(e.value)])
         })
 
-        fetch('angry-mcnulty-a3d36f.netlify.app/todos/'+id, {
+        fetch('/todos/'+id, {
         method: "PATCH",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({todos})
