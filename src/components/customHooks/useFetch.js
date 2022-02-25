@@ -5,7 +5,9 @@ const useFetch = (url) => {
 
 
     useEffect(() => {
-        fetch(url)
+        fetch(url, {
+            headers: {'Accept': 'application/json'}
+        })
         .then(res => res.json())
         .then(e => setData(e))
       }, [])
