@@ -11,7 +11,7 @@ const useFetch = (url) => {
         .then(res => res.json())
         .then(e => {
             console.log(e)
-            setData(e.todos)
+            setData(e)
         })
       }, [])
 
