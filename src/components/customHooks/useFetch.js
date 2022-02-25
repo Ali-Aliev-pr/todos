@@ -9,7 +9,7 @@ const useFetch = (url) => {
             headers: {'Accept': 'application/json'}
         })
         .then(res => res.json())
-        .then(e => e.forEach(e => console.log(e)))
+        .then(e => e.map(e => console.log(e)))
       }, [])
 
     return (
