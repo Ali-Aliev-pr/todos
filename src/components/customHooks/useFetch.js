@@ -6,6 +6,7 @@ const useFetch = (url) => {
 
     useEffect(() => {
         fetch(url, {
+            method: 'Get',
             headers: {'Accept': 'application/json'}
         })
         .then(res => res.json())
