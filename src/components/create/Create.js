@@ -36,10 +36,7 @@ const Create = () => {
         //     history.push("/")
         //     console.log(e)
         // })
-
-        fetch('data.json', {
-            method: "Get"
-        })
+        console.log(todo)
     }
 
 
