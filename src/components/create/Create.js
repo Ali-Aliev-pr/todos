@@ -25,9 +25,9 @@ const Create = () => {
         const todo = {title, more, author, todos}
 
         fetch('data.json', {
-            method: "GET",
-            // headers: {"Content-Type": "application/json"},
-            // body: JSON.stringify(todo)
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(todo)
         }).then((e) => {
             console.log('New todo created!')
             setAuthor('')
