@@ -174,3 +174,8 @@ input {
 .confirmation__none {
   display: none;
 }
+
+.homeGtton {
+  display: flex;
+  justify-content: center;
+}

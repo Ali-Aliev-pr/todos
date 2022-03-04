@@ -1,31 +1,25 @@
 import {Link} from 'react-router-dom'
+import { useState } from 'react'
 
 function ClassList({todos}) {
-
-    // console.log(todos && todos.push({id: 234, title: 'dfghjk', more: "We got lots of what to do", author: "Ali", todos: [
-    //     "play fifa",
-    //     "finish programm",
-    //     "GO TO GYM",
-    //     "after swimm"
-    //   ]}))
-    
+    // console.log(todos && todos[0].data)
     return (
         <div>
             <h2>Todos</h2>
             <div className="todos__father">
                 {todos && todos.map((e) => {
                     return (
-                        <div className="todo" key={e.id}>
-                            <h3>{e.title}</h3>
-                            <p>{e.more}</p>
+                        <div className="todo" key={e.data.title}>
+                            <h3>{e.data.title}</h3>
+                            <p>{e.data.more}</p>
                             <ul>
-                                {e.todos.map(todo => {
+                                {e.data.todos.map(todo => {
                                     return (
                                         <li key={todo}>{todo}</li>
                                     )
                                 })}
                             </ul>
-                            <Link className='linkMore' to={`todo/${e.id}`}>More...</Link>
+                            <Link className='linkMore' to={`todo/${e.title}`}>More...</Link>
                         </div>
                     )
                 })}
