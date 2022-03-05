@@ -3,6 +3,7 @@ import { useState } from 'react'
 
 function ClassList({todos}) {
     // console.log(todos && todos[0].data)
+    console.log(todos)
     return (
         <div>
             <h2>Todos</h2>
@@ -19,7 +20,7 @@ function ClassList({todos}) {
                                     )
                                 })}
                             </ul>
-                            <Link className='linkMore' to={`todo/${e.title}`}>More...</Link>
+                            <Link className='linkMore' to={`todo/${e.data.title}`}>More...</Link>
                         </div>
                     )
                 })}

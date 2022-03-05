@@ -1,5 +1,4 @@
 import {Link, useHistory, useParams} from 'react-router-dom';
-import useFetch from "../customHooks/useFetch";
 import { useState } from 'react';
 import Modal from '../modal/Modal';
 
@@ -8,27 +7,32 @@ const More = () => {
 
     let history = useHistory()
 
-    let {data} = useFetch('/todos/'+id)
-    // console.log(data)
-
     let [modal, setModal] = useState(false);
 
     let [add, setAdd] = useState(false)
 
+    let data = JSON.parse(localStorage.getItem(id))
+    console.log(JSON.parse(localStorage.getItem(id)))
+
+    // const handleDelete = () => {
+
+    //     setModal(true)
+
+    //     if (add === true) {
+    //         fetch('/todos/'+id, {
+    //         method: "DELETE"
+    //         }).then(() => {
+    //             console.log('Todo Deleted!')
+    //             history.push('/')
+    //         })
+    //     } else {
+    //         console.log('Подтвеждение')
+    //     }
+    // }
+
     const handleDelete = () => {
-
-        setModal(true)
-
-        if (add === true) {
-            fetch('/todos/'+id, {
-            method: "DELETE"
-            }).then(() => {
-                console.log('Todo Deleted!')
-                history.push('/')
-            })
-        } else {
-            console.log('Подтвеждение')
-        }
+        localStorage.removeItem(id)
+        history.push('/')
     }
 
     return (

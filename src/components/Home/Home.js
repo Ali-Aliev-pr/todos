@@ -17,7 +17,7 @@ function Home() {
     }
 
     let {data} = useFetch()
-    // console.log(data)
+
 
     return (
         <div>
